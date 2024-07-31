@@ -1,5 +1,6 @@
 body {
   background-color: rgb(21, 21, 21);
+  color: rgb(117, 117, 103);
 }
 
 .container {
@@ -7,7 +8,7 @@ body {
   margin: 40px auto;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.05);
-  max-width: 80%;
+  max-width: 60%;
   border-radius: 20px;
 }
 
@@ -20,7 +21,7 @@ form {
   background-color: transparent;
   border: solid, 1px, rgba(255, 255, 255, 0.1);
   border-radius: 5px;
-  width: 80%;
+  width: 100%;
   padding: 10px;
 }
 
@@ -31,4 +32,37 @@ form {
   color: rgb(117, 117, 103);
   margin-left: 5px;
   padding: 10px 20px 10px 20px;
+}
+
+.primary-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.weather {
+  text-align: right;
+  font-size: 20px;
+}
+
+.temperature-block {
+  text-align: center;
+  padding: 20px;
+}
+
+.temperature {
+  font-size: 30px;
+}
+
+.icon {
+  position: relative;
+  bottom: 8px;
+}
+
+.weather-conditions {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  text-align: center;
 }
