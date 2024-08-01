@@ -2,26 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
       <header>
-        <form action="">
+        <form action="" id="search">
           <input
             type="search"
             placeholder="Search for city"
             class="search-bar"
+            id="searchInput"
             required
           />
-          <input type="submit" class="submit-button" />
+          <input type="submit" class="submit-button" id="submitButton" />
         </form>
       </header>
       <main>
         <div class="primary-details">
-          <div class="city">City name</div>
+          <div class="city" id="city">City name</div>
           <div class="time">Tuesday 20:00,</div>
         </div>
         <div class="weather">Sunny</div>
@@ -38,5 +39,6 @@
     </div>
     <div class="forecast">Weather forecast</div>
     <footer>coded by jaz</footer>
+    <script src="src/script.js"></script>
   </body>
 </html>
