@@ -23,18 +23,19 @@
       </header>
       <main>
         <div class="primary-details">
-          <div class="city" id="city">City name</div>
+          <div class="city" id="city"></div>
           <div class="time">Tuesday 20:00,</div>
         </div>
-        <div class="weather">Sunny</div>
+        <div class="weather" id="description">Sunny</div>
         <div class="temperature-block">
           <span class="icon">☀️</span>
-          <span class="temperature">20°C</span>
+          <span class="temperature" id="temperature"></span>
         </div>
         <div class="weather-conditions">
-          <div class="Precipitation">Precipitation<br />12%</div>
-          <div class="humidity">Humidity<br />76%</div>
-          <div class="windspeed">Windspeed<br />15 km/h</div>
+          <div class="humidity">Humidity<br /><span id="humidity"></span></div>
+          <div class="windspeed">
+            Windspeed<br /><span id="windspeed"></span>
+          </div>
         </div>
       </main>
     </div>

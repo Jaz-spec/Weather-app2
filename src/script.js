@@ -18,5 +18,19 @@ function getData(city) {
 
 //updating details
 function refreshWeather(response) {
+  let city = document.querySelector("#city");
+  let description = document.querySelector("#description");
+  let temperature = document.querySelector("#temperature");
+  let humidity = document.querySelector("#humidity");
+  let windspeed = document.querySelector("#windspeed");
+
+  let currentTemperature = Math.round(response.data.temperature.current);
+
+  city.innerHTML = response.data.city;
+  description.innerHTML = response.data.condition.description;
+  temperature.innerHTML = `${currentTemperature}°C`;
+  humidity.innerHTML = `${response.data.temperature.humidity}%`;
+  windspeed.innerHTML = `${response.data.wind.speed} km/h`;
+
   console.log(response);
 }
