@@ -23,28 +23,27 @@ function refreshWeather(response) {
   let temperature = document.querySelector("#temperature");
   let humidity = document.querySelector("#humidity");
   let windspeed = document.querySelector("#windspeed");
-  let dateElement = document.querySelector("#date");
+  let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
+
   let currentTemperature = Math.round(response.data.temperature.current);
 
+  timeElement.innerHTML = formatDate(date);
   city.innerHTML = response.data.city;
   description.innerHTML = response.data.condition.description;
   temperature.innerHTML = `${currentTemperature}°C`;
   humidity.innerHTML = `${response.data.temperature.humidity}%`;
   windspeed.innerHTML = `${response.data.wind.speed} km/h`;
-  dateElement.innerHTML = formDate(date);
 
   console.log(response);
 }
 
 //form date
-function formDate(date) {
+function formatDate(date) {
   let hours = date.getHours();
   let minutes = date.getMinutes();
-  let day = days[date.getDay()];
-
   let days = [
-    "Sunday",
+    "sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
@@ -52,6 +51,13 @@ function formDate(date) {
     "Friday",
     "Saturday",
   ];
+  let day = days[date.getDay()];
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 
   return `${day}, ${hours}:${minutes}`;
 }
+
+getData("london");
