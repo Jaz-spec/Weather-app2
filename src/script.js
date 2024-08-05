@@ -62,4 +62,28 @@ function formatDate(date) {
   return `${day}, ${hours}:${minutes}`;
 }
 
+// forecast
+
+function formatForecast() {
+  let days = ["Mon", "Tue", "Wed", "Thur", "Fri"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="forecast-block">
+  <div class="forecast-day">${day}</div>
+  <div class="forecast-icon">☀️</div>
+  <div class="forecast-temperatures"></div>
+  <span class="forcast-temperature-high">21°C</span>
+  <span class="forecast-temperature-low">15°C</span>
+  </div>`;
+  });
+
+  let forecast = document.querySelector("#forecast");
+  forecast.innerHTML = forecastHtml;
+}
+
+//calling functions to display
 getData("london");
+formatForecast();
