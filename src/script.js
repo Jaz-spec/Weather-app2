@@ -18,6 +18,8 @@ function getData(city) {
 
 //updating details
 function refreshWeather(response) {
+  console.log(response);
+
   let city = document.querySelector("#city");
   let description = document.querySelector("#description");
   let temperature = document.querySelector("#temperature");
@@ -36,8 +38,7 @@ function refreshWeather(response) {
   windspeed.innerHTML = `${response.data.wind.speed} km/h`;
   icon.innerHTML = `<img class="icon" src="${response.data.condition.icon_url}" alt="" />`;
 
-  console.log(response);
-  console.log(response.data.condition.icon_url);
+  getForecast(response.data.city);
 }
 
 //form date
@@ -62,9 +63,18 @@ function formatDate(date) {
   return `${day}, ${hours}:${minutes}`;
 }
 
+//calling forecast Api
+function getForecast(city) {
+  let apiKey = "oa9f439cb230f940atf8b1fac2e41075";
+  let forecastApi = `https://api.shecodes.io/weather/v1/forecast?query=${city}}&key=${apiKey}`;
+  axios(forecastApi).then(formatForecast);
+}
+
 // forecast
 
-function formatForecast() {
+function formatForecast(response) {
+  console.log(response);
+
   let days = ["Mon", "Tue", "Wed", "Thur", "Fri"];
   let forecastHtml = "";
 
@@ -86,4 +96,3 @@ function formatForecast() {
 
 //calling functions to display
 getData("london");
-formatForecast();
