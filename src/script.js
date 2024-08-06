@@ -92,13 +92,14 @@ function formatForecast(response) {
         `<div class="forecast-block">
   <div class="forecast-day">${formatForecastDate(day.time)}</div>
   <img src="${day.condition.icon_url}" class="forecast-icon"/>
-  <div class="forecast-temperatures"></div>
+  <div class="forecast-temperatures">
   <span class="forcast-temperature-high">${Math.round(
     day.temperature.maximum
-  )}°C</span>
+  )}°</span>
   <span class="forecast-temperature-low">${Math.round(
     day.temperature.minimum
-  )}°C</span>
+  )}°</span>
+  </div>
   </div>`;
     }
   });
