@@ -36,38 +36,48 @@ form {
 }
 
 .primary-details {
+  padding-top: 20px;
   display: flex;
   justify-content: space-between;
-  font-size: 20px;
-  margin-top: 10px;
 }
 
-.weather {
-  text-align: right;
-  font-size: 20px;
+.city {
+  font-size: 40px;
 }
 
 .temperature-block {
-  text-align: center;
-  padding: 20px;
+  position: relative;
+  bottom: 10px;
 }
 
 .temperature {
-  font-size: 30px;
+  font-size: 80px;
+}
+
+.degrees {
+  font-size: 20px;
+  position: relative;
+  bottom: 40px;
+  right: 5px;
 }
 
 .icon {
   position: relative;
-  top: 8px;
-  width: 50px;
-  height: 50px;
+  top: 15px;
+  left: 5px;
+  width: 80px;
+  height: 80px;
+}
+
+.secondary-details {
+  font-size: 15px;
+  position: relative;
+  bottom: 50px;
 }
 
 .weather-conditions {
-  display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
-  text-align: center;
+  position: relative;
+  bottom: 20px;
 }
 
 .container2 {

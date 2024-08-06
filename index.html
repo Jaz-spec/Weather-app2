@@ -24,18 +24,19 @@
       <main>
         <div class="primary-details">
           <div class="city" id="city"></div>
-          <div class="time" id="time"></div>
+          <div class="temperature-block">
+            <span id="icon"> </span>
+            <span class="temperature" id="temperature"></span
+            ><span class="degrees">°C</span>
+          </div>
         </div>
-        <div class="weather" id="description">Sunny</div>
-        <div class="temperature-block">
-          <span id="icon"> </span>
-          <span class="temperature" id="temperature"></span>
+        <div class="secondary-details">
+          <div class="time" id="time"></div>
+          <div class="weather" id="description">Sunny</div>
         </div>
         <div class="weather-conditions">
-          <div class="humidity">Humidity<br /><span id="humidity"></span></div>
-          <div class="windspeed">
-            Windspeed<br /><span id="windspeed"></span>
-          </div>
+          <div class="humidity">Humidity: <span id="humidity"></span></div>
+          <div class="windspeed">Windspeed: <span id="windspeed"></span></div>
         </div>
       </main>
     </div>
