@@ -9,7 +9,7 @@ body {
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.05);
   max-width: 60%;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 form {
@@ -25,10 +25,6 @@ form {
   padding: 10px;
   color: rgb(183, 183, 172);
   outline: none;
-}
-
-.search-bar :focus {
-  background-color: blue;
 }
 
 ::placeholder {
@@ -95,7 +91,7 @@ form {
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.05);
   max-width: 60%;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 .forecast {
@@ -116,4 +112,14 @@ form {
 
 footer {
   text-align: center;
+  font-size: 15px;
+}
+
+a {
+  color: rgb(183, 183, 172);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
